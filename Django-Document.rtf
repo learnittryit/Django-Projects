@@ -3,9 +3,11 @@
 \f3\fswiss\fcharset0 Arial-BoldMT;\f4\fnil\fcharset0 Menlo-Regular;\f5\fnil\fcharset0 Menlo-Bold;
 \f6\fnil\fcharset0 Menlo-BoldItalic;\f7\fnil\fcharset0 Menlo-Italic;}
 {\colortbl;\red255\green255\blue255;\red27\green29\blue31;\red255\green255\blue255;\red2\green2\blue2;
-\red0\green0\blue0;\red251\green0\blue145;\red59\green0\blue164;}
+\red0\green0\blue0;\red0\green0\blue0;\red251\green0\blue145;\red59\green0\blue164;\red159\green160\blue28;
+\red46\green174\blue187;\red47\green180\blue29;\red27\green31\blue34;\red27\green29\blue31;}
 {\*\expandedcolortbl;;\cssrgb\c14118\c15294\c16078;\cssrgb\c100000\c100000\c100000;\cssrgb\c784\c784\c784\c80000;
-\csgray\c0;\cssrgb\c100000\c19175\c63524;\cssrgb\c30181\c13393\c70360;}
+\csgray\c0;\cssrgb\c0\c0\c0;\cssrgb\c100000\c19175\c63524;\cssrgb\c30181\c13393\c70360;\cssrgb\c68468\c68012\c14208;
+\cssrgb\c20196\c73240\c78250;\cssrgb\c20238\c73898\c14947;\cssrgb\c14118\c16078\c18039;\cssrgb\c14118\c15294\c16078;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww25100\viewh15180\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
@@ -139,18 +141,93 @@ Git has email and name associated to it:\
 \f4\i0 \ulnone  =   SECRET_KEY = '1ty5b(zar65n3v6@w_ir5!=(7l(@iu80kl3_ey56s%t=8x0n@v'\
 		
 \f7\i \ul I modified value
-\f4\i0 \ulnone  = 		original value =   SECRET_KEY = '1ty5b(zar65n3v6@w_ir5!=(7l(@iu80kl3_ey56s%t=8x0n@v \cf6 -kunal-has-modified\cf5 \'92\
+\f4\i0 \ulnone  = 		original value =   SECRET_KEY = '1ty5b(zar65n3v6@w_ir5!=(7l(@\cf6 iu80kl3_ey56s\cf5 %t=8x0n@v \cf7 -kunal-has-modified\cf5 \'92\
 		Now I did >> git stash \
 
 \f5\b 		Outcome : The modified changes are reverted to the original working copy
 \f4\b0 \
 		
 \f7\i \ul \ulc5 original value
-\f4\i0 \ulnone  =   SECRET_KEY = '1ty5b(zar65n3v6@w_ir5!=(7l(@iu80kl3_ey56s%t=8x0n@v\'92\cf7 \'97\'97\'97\'97> back to original water stash\cf5 \
+\f4\i0 \ulnone  =   SECRET_KEY = '1ty5b(zar65n3v6@w_ir5!=(7l(@iu80kl3_ey56s%t=8x0n@v\'92\cf8 \'97\'97\'97\'97> back to original water stash\cf5 \
+	Finally - HEAD commit is prevailed		\
 \
-4. Get All the configurations setup by command \
+\
+	
+\f5\b \ul step 4 - 
+\f4\b0 \ulnone git log\
+		>> git log -> this will show you all the different commits that we have done in the past with the relevant messages\
+		\
+	
+\f5\b \ul step 5
+\f4\b0 \ulnone 	- We can check code like :\
+			>> git log \
+				user@Users-Air Django % git log\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf9 					commit f06a9ab19b70fddcfc0329426763d16a2536c037 (
+\f5\b \cf10 HEAD -> \cf11 master
+\f4\b0 \cf9 )\cf5 \
+					Author: learnittryit <learnittryit@gmail.com>\
+					Date:   Sat Feb 6 12:18:54 2021 +0800\
+		    commiting the git notes\
+			\
+		>> git checkout \cf9 f06a9ab19b70fddcfc0329426763d16a2536c037 \cf6 => This will checkout this specific id code\cf5 \
+		\
+\
+\
+4. Copying commands from GIT\
+### Push \
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf12 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec12 git remote add origin https://github.com/learnittryit/Django-Projects.git\
+git remote add origin https://github.com/learnittryit/Django-Projects.git\
+	- Kunal now GitHub.com is out origin, this is the place where our code will live\
+\
+git branch -M main\
+git push -u origin main\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs22 \cf5 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0  \
+\
+# Create Commands\
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf12 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec12 echo "# Django-Projects" >> README.md\
+git init\
+git add README.md\
+git commit -m "first commit"\
+git branch -M main\
+git remote add origin https://github.com/learnittryit/Django-Projects.git\
+git push -u origin main/master\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs22 \cf5 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \
+\
+\
+\
+4.1 Very Very important steps\
+	a. Add the code to git repository and then push the code\
+	git remote origin http://github.com/learnit/Django-Projets.git [basicially my remote origin is mapped to this url]\
+	git push -u origin master - push my code to master \
+\
+4.2 
+\f1\fs26 \cf13 \cb3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 	click on commits and see the history\
+	checkout by making a clone of  the code\
+	git clone 	https://github.com/learnittryit/Django-Projects.git
+\f4\fs22 \cf5 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\
+\
+5. Get All the configurations setup by command \
 	>>git config \'97list \
 
+\f1\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec2 6. Command to remove directory\
+
+\f4\fs22 \cf5 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 user@Users-Air Django-to-be-deleted % rm -r Django-Projects \
+\
+6. Sourcetree - better than the other tools and easy for coomandline
 \f1\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \outl0\strokewidth0 \strokec2 \
 \pard\pardeftab720\partightenfactor0
