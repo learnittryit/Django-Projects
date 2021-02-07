@@ -1,0 +1,23 @@
+<h1>This is my home page</h1>
+
+{{ projectsVariable }}
+
+<h2>Now see the for loop</h2>
+
+{% for project in projectsVariable %}
+        <!--Title-->
+        <h3>{{ project.title_updated }}</h3>
+
+      <!--Desc-->
+        <p>{{ project.description}}</p>
+      <!--image path-->
+        <p>{{ project.image }}</p>
+        <!--complete image path-->
+        <p>{{ project.image.url }}</p>
+      <!--show an actual image-->
+        <image src={{project.image.url}} hight=40 width=50>
+
+      {% if project.url %}
+            <br><a href="{{ project.url}}">Link</a></br>
+      {% endif %}
+{% endfor %}

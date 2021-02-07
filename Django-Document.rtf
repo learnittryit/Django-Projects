@@ -4,10 +4,14 @@
 \f6\fnil\fcharset0 Menlo-BoldItalic;\f7\fnil\fcharset0 Menlo-Italic;}
 {\colortbl;\red255\green255\blue255;\red27\green29\blue31;\red255\green255\blue255;\red2\green2\blue2;
 \red0\green0\blue0;\red0\green0\blue0;\red251\green0\blue145;\red59\green0\blue164;\red159\green160\blue28;
-\red46\green174\blue187;\red47\green180\blue29;\red27\green31\blue34;\red27\green29\blue31;}
+\red46\green174\blue187;\red47\green180\blue29;\red27\green31\blue34;\red27\green29\blue31;\red100\green14\blue47;
+\red180\green36\blue25;\red0\green0\blue255;\red114\green44\blue253;\red251\green2\blue255;\red202\green219\blue254;
+\red71\green204\blue252;}
 {\*\expandedcolortbl;;\cssrgb\c14118\c15294\c16078;\cssrgb\c100000\c100000\c100000;\cssrgb\c784\c784\c784\c80000;
 \csgray\c0;\cssrgb\c0\c0\c0;\cssrgb\c100000\c19175\c63524;\cssrgb\c30181\c13393\c70360;\cssrgb\c68468\c68012\c14208;
-\cssrgb\c20196\c73240\c78250;\cssrgb\c20238\c73898\c14947;\cssrgb\c14118\c16078\c18039;\cssrgb\c14118\c15294\c16078;}
+\cssrgb\c20196\c73240\c78250;\cssrgb\c20238\c73898\c14947;\cssrgb\c14118\c16078\c18039;\cssrgb\c14118\c15294\c16078;\cssrgb\c47318\c10151\c24130;
+\cssrgb\c76409\c21698\c12524;\cssrgb\c1680\c19835\c100000;\cssrgb\c52799\c30710\c99498;\cssrgb\c100000\c25279\c100000;\cssrgb\c82956\c88909\c99731;
+\cssrgb\c32483\c83691\c99157;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww25100\viewh15180\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
@@ -227,7 +231,282 @@ git push -u origin main/master\
 
 \f4\fs22 \cf5 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 user@Users-Air Django-to-be-deleted % rm -r Django-Projects \
 \
-6. Sourcetree - better than the other tools and easy for coomandline
+6. Sourcetree - better than the other tools and easy for coomandline\
+\
+\
+\
+\
+######## Creating a New Project\
+\
+1. Start a new project\
+	dJango-admin startproject projectName	\
+2. TO see all the commands write 
+\f6\i\b \ul django and enter\
+\cf14 \ulc14 	user@Users-Air Django % django-admin
+\f4\i0\b0 \cf5 \ulnone \
+3. Renamed the folder \
+	ProjectFolder \'97> [project , manage.py ] all done by django to kick start and continue\
+\
+4. Now we are in the project , so we need pieces of out code , which we call are apps \
+	python3 manage.py startapp appName     => startalp basically create an app for you\
+		a. App means - peice of code\
+		b. App also creates a folder specific to the particular app or piece of code\
+\
+5. All apps are to be present or added in the projects file setting.py , under a key INSTALLED_APPS\
+INSTALLED_APPS = [\
+    \'91blog\'92,\
+    \'91portfolio\'92,\
+ ]\
+	\
+6. Django - has a model concept\
+	from dJango.db import model.  == > This is essentially a class representing a table in the DB\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf13 \cb3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 	Very Important and necessary step:\
+	\
+	<!\'97\'97 In models.py\'97\'97>\
+	from dJango.db import models\
+	class Project(models.Model):\
+		// see here we are getting a Model from the Django models , because we want to interact with the DB and pass information\
+		// everything will happen with models field\
+\
+\pard\pardeftab720\partightenfactor0
+\cf13 	website - Types of fields allows in the Django model\
+		https://docs.djangoproject.com/en/3.1/ref/models/fields/\
+\
+\
+7 Download , images library - If you are going to deal with images then the Pillow must be installed\
+\
+PIL - Python Imaging Library. > Open/Manipulating/resizing the images\
+https://pypi.org/project/Pillow/2.2.1/\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f4\fs22 \cf5 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 ERRORS:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f5\b \cf15 portfolio.Project.image: (fields.E210) Cannot use ImageField because Pillow is not installed.
+\f4\b0 \cf5 \
+
+\f5\b \cf15 	HINT: Get Pillow at https://pypi.org/project/Pillow/ or run command "python -m pip install Pillow".\
+\cf16 Action to be taken by Kunal
+\f1\b0\fs26 \cf13 \cb3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f4\fs22 \cf5 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 user@Users-Air personal_portfolio_kunal-project % pip3 install Pillow\
+\
+Important-  Anything you do to your model is a migration > Migrating the model to the DB\
+			In the settings there are already lots and lots of apps already installed in SETTINGS.PY the machine INSTALLED_APPS\
+\
+8. So , now how to apply migrations \'97\'97> Basically Migration is disseminating or Propagating the fields to the DB from the Models\
+	>>python3 manage.py migrate\
+\
+Below thing happens\
+\'97\'97\'97\'97\
+user@Users-Air personal_portfolio_kunal-project % python3 manage.py migrate\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f5\b \cf10 Operations to perform:
+\f4\b0 \cf5 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f5\b   Apply all migrations: 
+\f4\b0 admin, auth, contenttypes, sessions\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f5\b \cf10 Running migrations:
+\f4\b0 \cf5 \
+  Applying contenttypes.0001_initial...
+\f5\b \cf11  OK
+\f4\b0 \cf5 \
+  Applying auth.0001_initial...
+\f5\b \cf11  OK
+\f4\b0 \cf5 \
+  Applying admin.0001_initial...
+\f5\b \cf11  OK
+\f4\b0 \cf5 \
+  Applying admin.0002_logentry_remove_auto_add...
+\f5\b \cf11  OK
+\f4\b0 \cf5 \
+  Applying admin.0003_logentry_add_action_flag_choices...
+\f5\b \cf11  OK
+\f4\b0 \cf5 \
+  Applying contenttypes.0002_remove_content_type_name...
+\f5\b \cf11  OK
+\f4\b0 \cf5 \
+  Applying auth.0002_alter_permission_name_max_length...
+\f5\b \cf11  OK
+\f4\b0 \cf5 \
+  Applying auth.0003_alter_user_email_max_length...
+\f5\b \cf11  OK
+\f4\b0 \cf5 \
+  Applying auth.0004_alter_user_username_opts...
+\f5\b \cf11  OK
+\f4\b0 \cf5 \
+  Applying auth.0005_alter_user_last_login_null...
+\f5\b \cf11  OK
+\f4\b0 \cf5 \
+  Applying auth.0006_require_contenttypes_0002...
+\f5\b \cf11  OK
+\f4\b0 \cf5 \
+  Applying auth.0007_alter_validators_add_error_messages...
+\f5\b \cf11  OK
+\f4\b0 \cf5 \
+  Applying auth.0008_alter_user_username_max_length...
+\f5\b \cf11  OK
+\f4\b0 \cf5 \
+  Applying auth.0009_alter_user_last_name_max_length...
+\f5\b \cf11  OK
+\f4\b0 \cf5 \
+  Applying auth.0010_alter_group_name_max_length...
+\f5\b \cf11  OK
+\f4\b0 \cf5 \
+  Applying auth.0011_update_proxy_permissions...
+\f5\b \cf11  OK
+\f4\b0 \cf5 \
+  Applying auth.0012_alter_user_first_name_max_length...
+\f5\b \cf11  OK
+\f4\b0 \cf5 \
+  Applying sessions.0001_initial...
+\f5\b \cf11  OK
+\f4\b0 \cf5 \
+user@Users-Air personal_portfolio_kunal-project % \
+\
+\
+\
+\
+\
+\
+\
+9. Make migrations - please see if any of my new changes are there \
+	>> python3 manage.py make migrations       [ Just check if the model and the DB are in sync or not ]\
+\
+##### Hey we have a new model name Project, and we have done a migration for the portfolio app , as shown in blue line\
+user@Users-Air personal_portfolio_kunal-project % python3 manage.py makemigrations\
+
+\f5\b \cf10 Migrations for 'portfolio':
+\f4\b0 \cf5 \
+  
+\f5\b portfolio/migrations/0001_initial.py
+\f4\b0 \
+    - Create model Project\
+user@Users-Air personal_portfolio_kunal-project % \
+\
+Makemigrations - does the packaging in a file to be committed, and check if all are in sync\
+Migrate - its an actual commit, means actual sync is done by this\
+\
+10. Note - Never manipulate the migrated files by hand\
+\
+user@Users-Air personal_portfolio_kunal-project % python3 manage.py makemigrations\
+No changes detected\
+\
+\
+11. Every time we make a change and do make migrations and then migrate then the new migrated file is created\
+\
+12. Localhost://8000/admin \
+	Now we have to create a username and password , I.e create super user\
+>> python3 manage.py Click-Enter to see all the commands available\
+>>user@Users-Air personal_portfolio_kunal-project % python3 manage.py createsueruser\
+\
+user@Users-Air personal_portfolio_kunal-project % python3 manage.py createsueruser\
+Unknown command: 'createsueruser'. Did you mean createsuperuser?\
+Type 'manage.py help' for usage.\
+user@Users-Air personal_portfolio_kunal-project % python3 manage.py createsuperuser\
+Username (leave blank to use 'user'): kunal \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f5\b \cf15 Error: Enter a valid username. This value may contain only letters, numbers, and @/./+/-/_ characters.
+\f4\b0 \cf5 \
+	Username (leave blank to use 'user'): kunal\
+	Email address: kunalrai1005@gmail.com\
+	Password: Nsel0987^ \
+	Password (again): \
+	Superuser created successfully.\
+\
+> We can make multiple superusers\
+\
+13. \cb17 Important\cb1 	- change password\
+	python3 manage.py changepassword username<kunal>\
+\
+\
+14. Admin.py \'97> basically we want to see what models we want to show up here \
+from django.contrib import admin this is the module / class / package\
+\
+from .models import Project\
+\
+15. Now website is ready, I can see my media apps and need to see \
+	Now important septs\
+	a. We can delete the images folder \
+	
+\f6\i\b b. Go-to settings.py in the project
+\f4\i0\b0 \
+		b.1 add a valuable MEDIA_ROOT -> I want to save my media files in DB\
+		\
+	And Data base is stored in the base directory\
+	 	In settings.py , below is the entry\
+			DATABASES = \{\
+    	'default': \{\
+    	    'ENGINE': 'django.db.backends.sqlite3',\
+    	    'NAME': BASE_DIR / 'db.sqlite3',\
+    			\}\
+		\}\
+\
+##Kunal Very Important - Take whatever is the base directory and then add MEDIA to it
+\f5\b \ul \
+Make an entry
+\f4\b0 \ulnone  MEDIA_ROOT = BASE_DIR / \'91MEDIA\'92\
+
+\f5\b \cf18 \cb19 \ul \ulc18 Below entries are must to view images
+\f4\b0 \cf5 \cb20 \ulnone \
+\cb1 1. url.py\
+	from django.conf import settings\
+	from django.conf.urls.static import static\
+\
+2. settings.py\
+	MEDIA_URL =\'91/MEDIA/\'92\
+	MEDIA_ROOT= BASEDIT/\'91MEDIA\'92/\
+\
+	urlpatterns+=static(settings.mediaUrl,document_root=settings.media_root) # Kunal -means all the variables in the settings are static\
+3. \
+\
+15.1 - Now we have to update urls.py so that the images are available\
+\
+\
+16.  Now we are going to add the image on the home page and not on the admin login \
+	since we have added the urlpatterns+=satic(url, root) \'97> therefore now the default home page will not be shown\
+\
+\
+17 We have to use views to hold and use the DB objects to render on the page\
+	# We will get the project objects from the data base and present on the screen using views.py \
+		#from .models import Project # Where Project is the name of our class (Class is present in module models.py)\
+		# ClassName.Objects \'97 > this will get all the Objects e.g Project.Objects.all()\
+		\
+	# Then we send them forward into the template , so that it can be viewed on the screen\
+	# Django has a lot of stuff done for you , 	No need to write query or anything, simply import models and associate the class defined in models.py\
+	# in view we have associated the model class objects as a dictionary\
+
+\f7\i \cf16 		In view class - \
+		from .models import ClassName\
+		def home(request):\
+			projectsObj =ClassName.objects.all() # This means get all the Objects\
+			return render(request,\'92passRequestToThisTemplate.html\'92,\{\'91projectVariable\'92:projectsObj\})\
+		In html - \{\{ projectsVariable \}\}\
+\
+	# \{\{ VariableName \}\} - When you only want to pull the value from object i.e evaluate and replace the value\
+	# \{% TagName %\} - More complex then variables \
+					#When you want to apply a logic, may be for loop or anything\
+	E.g \{% for val in Obj%\}\
+		\
+		\{% endFor %\}\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f4\i0 \cf5 \
+
 \f1\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \outl0\strokewidth0 \strokec2 \
 \pard\pardeftab720\partightenfactor0
